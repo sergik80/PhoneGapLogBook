@@ -36,8 +36,8 @@ C:\projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\eLogboo
 C:\projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\img \
 C:\projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\index.html \
 C:\projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\js \
+C:\projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\locator \
 C:\projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\plugins \
-C:\projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\serviceTracker \
 C:\projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\tracker \
 C:\projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\css\index.css \
 C:\projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\css\jquery.mobile-1.4.5.min.css \
@@ -67,12 +67,11 @@ C:\projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\js\eLog
 C:\projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\js\eLogbook\services.js \
 C:\projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\js\tracker\exercisetracker.js \
 C:\projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\js\tracker\json2.js \
+C:\projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\locator\index.html \
 C:\projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\plugins\org.apache.cordova.dialogs \
 C:\projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\plugins\org.apache.cordova.dialogs\www \
 C:\projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\plugins\org.apache.cordova.dialogs\www\android \
 C:\projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\plugins\org.apache.cordova.dialogs\www\notification.js \
 C:\projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\plugins\org.apache.cordova.dialogs\www\android\notification.js \
-C:\projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\serviceTracker\index.html \
-C:\projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\serviceTracker\serviceLookup.html \
 C:\projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\tracker\index.html \
 C:\projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\ant-build\AndroidManifest.xml \

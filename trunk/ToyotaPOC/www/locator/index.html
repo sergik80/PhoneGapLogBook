@@ -11,7 +11,6 @@
     </head>
     <body>
         <div class="app">
-            <h1>eLogbook</h1>
             <div id="deviceready" class="blink">
              
                Favorite Service Locations
@@ -21,12 +20,41 @@
                <li>Service location 2</li>
                <li>Service location 2</li>
                </ul>
-               
-               
-              <p><a href="serviceTracker/serviceLookup.html">Service Locations Tracker</a></p> 
-               
             </div>
         </div>
+        
+        
+        
+        
+        
+        
+        <!-- page -->
+        <div data-role="page" id="serviceLookup">
+
+		<div data-role="header">
+			<h2>Service Stations Lookup</h2>
+		</div>
+
+		<div data-role="content">
+             <p>Find closest services</p>			
+			<div data-role="fieldcontain" >
+	    </div>	
+			   Radius to search
+               <input type="text" id="distance"/>         
+               <input type="button" value="search" id="search"/>   
+               
+               <span id="map">map is here</span>
+               
+               <label for="station_id">Station ID/Name:</label> 
+               <span id="selected">name is here</span>
+               <br>
+               <input type="submit" value="save to favs" id="save"/>  
+		</div>
+	</div>
+	<!-- /page -->
+        
+        
+        
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/logbook.js"></script>
     </body>
@@ -36,6 +64,9 @@
 
 
 
+
+
+        
 
 
 
