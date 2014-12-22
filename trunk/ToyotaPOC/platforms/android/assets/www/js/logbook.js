@@ -6,6 +6,8 @@ var app = {
 
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
+        document.getElementById('createService').addEventListener('click', this.createNewService, false);
+        document.getElementById('removeServices').addEventListener('click', this.removeServices, false);
     },
 
     onDeviceReady: function() {
@@ -26,7 +28,7 @@ var app = {
      
         if (null == theList || theList == "null")
         {
-            this.deleteAllItems();
+            this.removeServices();
         }
         else
         {
@@ -36,11 +38,32 @@ var app = {
                 count++;
             }
      
-            this.deleteAllItems();
+            this.removeServices();
      
             for(var i = 0; i < count; i++)
             {
                 addLogbookItem(theList["row" + i], true);
+            }
+        }
+    },
+    
+    function createNewService()
+    {
+    	console.log("Create new service prompt");
+    	
+        var todoDictionary = {};
+     
+        var todo = prompt("Service","");
+        if (todo != null)
+        {
+            if (todo == "")
+            {
+                alert("To-Do can't be empty!");
+            }
+            else
+            {
+                todoDictionary = { check : 0 , text : todo};
+                addLogbookItem(todoDictionary, false);
             }
         }
     },
@@ -104,7 +127,7 @@ var app = {
         if (!appIsLoading) alert("Item Added Successfully.");
     }
     
-    function deleteAllItems()
+    function removeServices()
     {
         var list = document.getElementById("logbook");
         
