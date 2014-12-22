@@ -30,7 +30,7 @@ var track_id = '';      // Name/ID of the exercise
 var watch_id = null;    // ID of the geolocation
 var tracking_data = []; // Array containing GPS position objects
 
-$("#startTracking_start").live('click', function(){
+$("#startTracking_start").on('click', function(){
     
 	// Start tracking the User
     watch_id = navigator.geolocation.watchPosition(
@@ -57,7 +57,7 @@ $("#startTracking_start").live('click', function(){
 });
 
 
-$("#startTracking_stop").live('click', function(){
+$("#startTracking_stop").on('click', function(){
 	
 	// Stop tracking the user
 	navigator.geolocation.clearWatch(watch_id);
@@ -76,17 +76,17 @@ $("#startTracking_stop").live('click', function(){
 
 });
 
-$("#home_clearstorage_button").live('click', function(){
+$("#home_clearstorage_button").on('click', function(){
 	window.localStorage.clear();
 });
 
-$("#home_seedgps_button").live('click', function(){
+$("#home_seedgps_button").on('click', function(){
 	window.localStorage.setItem('Sample block', '[{"timestamp":1335700802000,"coords":{"heading":null,"altitude":null,"longitude":170.33488333333335,"accuracy":0,"latitude":-45.87475166666666,"speed":null,"altitudeAccuracy":null}},{"timestamp":1335700803000,"coords":{"heading":null,"altitude":null,"longitude":170.33481666666665,"accuracy":0,"latitude":-45.87465,"speed":null,"altitudeAccuracy":null}},{"timestamp":1335700804000,"coords":{"heading":null,"altitude":null,"longitude":170.33426999999998,"accuracy":0,"latitude":-45.873708333333326,"speed":null,"altitudeAccuracy":null}},{"timestamp":1335700805000,"coords":{"heading":null,"altitude":null,"longitude":170.33318333333335,"accuracy":0,"latitude":-45.87178333333333,"speed":null,"altitudeAccuracy":null}},{"timestamp":1335700806000,"coords":{"heading":null,"altitude":null,"longitude":170.33416166666666,"accuracy":0,"latitude":-45.871478333333336,"speed":null,"altitudeAccuracy":null}},{"timestamp":1335700807000,"coords":{"heading":null,"altitude":null,"longitude":170.33526833333332,"accuracy":0,"latitude":-45.873394999999995,"speed":null,"altitudeAccuracy":null}},{"timestamp":1335700808000,"coords":{"heading":null,"altitude":null,"longitude":170.33427333333336,"accuracy":0,"latitude":-45.873711666666665,"speed":null,"altitudeAccuracy":null}},{"timestamp":1335700809000,"coords":{"heading":null,"altitude":null,"longitude":170.33488333333335,"accuracy":0,"latitude":-45.87475166666666,"speed":null,"altitudeAccuracy":null}}]');
 
 });
 
 // When the user views the history page
-$('#history').live('pageshow', function () {
+$('#history').on('pageshow', function () {
 	
 	// Count the number of entries in localStorage and display this information to the user
 	tracks_recorded = window.localStorage.length;
@@ -106,7 +106,7 @@ $('#history').live('pageshow', function () {
 });
 
 // When the user clicks a link to view track info, set/change the track_id attribute on the track_info page.
-$("#history_tracklist li a").live('click', function(){
+$("#history_tracklist li a").on('click', function(){
 
 	$("#track_info").attr("track_id", $(this).text());
 	
@@ -114,7 +114,7 @@ $("#history_tracklist li a").live('click', function(){
 
 
 // When the user views the Track Info page
-$('#track_info').live('pageshow', function(){
+$('#track_info').on('pageshow', function(){
 
 	// Find the track_id of the workout they are viewing
 	var key = $(this).attr("track_id");
