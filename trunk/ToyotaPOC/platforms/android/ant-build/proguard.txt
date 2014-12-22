@@ -1,0 +1,3 @@
+# view AndroidManifest.xml #generated:6
+-keep class au.oakton.com.toyotapoc.CordovaApp { <init>(...); }
+
