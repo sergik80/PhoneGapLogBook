@@ -18,6 +18,20 @@ logbookControllers.controller('LogbookController', [ '$scope', 'localStorageServ
 				localStorageService.set('logbookEntries', logbookEntries);
 				$scope.loadData();
 			}
+			$scope.removeService = function(entry) {
+				var logbookEntries = localStorageService.get('logbookEntries');
+				if(!logbookEntries) return;
+				var found = -1;
+				for(var i = 0; i < logbookEntries.length; i++) {
+					if(logbookEntries[i].serviceId == entry.serviceId) {
+						found = i;
+						break;
+					}
+				}
+				if(found != -1) logbookEntries.splice(found, 1);
+				localStorageService.set('logbookEntries', logbookEntries);
+				$scope.loadData();
+			}
 			$scope.loadData();
 		} ]);
 
