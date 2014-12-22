@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html data-ng-app="logbookApp">
     <head>
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
@@ -8,26 +8,36 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>Hello World</title>
+        <script type="text/javascript" src="../cordova.js"></script>
+        <script type="text/javascript" src="../js/angular.js"></script>
+        <script type="text/javascript" src="../js/angular-resource.min.js"></script>
+        <script type="text/javascript" src="../js/angular-route.min.js"></script>
+        <script type="text/javascript" src="../js/angular-local-storage.js"></script>
+        <script type="text/javascript" src="../js/eLogbook/filters.js"></script>
+        <script type="text/javascript" src="../js/eLogbook/controllers.js"></script>
+        <script type="text/javascript" src="../js/eLogbook/app.js"></script>
     </head>
     <body>
         <div class="app">
             <h1>eLogbook</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
+            <div data-ng-controller="LogbookController">
                 <div class="event received">
-                	<input type="button" id="createService" value="Add Service" />
-    				<input type="button" id="removeServices" value="Remove Service(s)" />
-                	<ul id="logbook">
-                		<li>
-                			<span><input type="checkbox" name="chkbox" value="true" /></span>
-                			<span><input type="text" name="name" value="" /></span>
-                			<span><input type="button" value="x" /></span>
+                	<div>
+	                	Add entry:<br />
+	                	<input type="date" data-ng-model="newServiceDate"><br />
+	               		<input type="text" data-ng-model="newServiceDetails"><br />
+	               		<input type="text" data-ng-model="newServiceCentre"><br />
+	        			<button data-ng-click="addService(newServiceDate, newServiceDetails, newServiceCentre)">Add</button>
+        			</div>
+                	<ul>
+                		<li data-ng-repeat="entry in entries">
+                			<span>{{entry.serviceDate | date:"MM/dd/yyyy 'at' h:mma"}}</span>
+                			<span>{{entry.serviceDetails}}</span>
+                			<span>{{entry.serviceCentre}}</span>
                			</li>
                 	</ul>
                 </div>
             </div>
         </div>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/logbook.js"></script>
     </body>
 </html>
