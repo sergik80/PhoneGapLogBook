@@ -6,24 +6,52 @@
         <meta name="msapplication-tap-highlight" content="no" />
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
+      
+        <script type="text/javascript" src="../js/locator/filters.js"></script>
+        <script type="text/javascript" src="../js/locator/controllers.js"></script>
+        <script type="text/javascript" src="../js/locator/app.js"></script>   
+        <script type="text/javascript" src="../js/locator/services.js"></script>
+              
+       
+        
+      <!-- <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDT51isQ2Hrr9MDwnKAKjcVvaJfc9zId8I&sensor=false"></script>
+        -->
+        <script type="text/javascript" src="../js/locator/json2.js"></script>
+        <script type="text/javascript" src="../js/locator/locator.js"></script>
+        <script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript" src="../js/jquery.mobile-1.4.5.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />  
+      
         <title>Service Locations</title>
     </head>
     <body>
-        <div class="app">
+
+
+
+
+
+
+        <!-- page -->
+        <div data-role="page" id="favouriteServices">       
             <div id="deviceready" class="blink">
-             
-               Favorite Service Locations
-               
+
+		<div data-role="header">
+			<h2>Favorite Service Points</h2>
+		</div>   
+		          
+        <div data-role="content">              
                <ul>
                <li>Service Location 1</li>
                <li>Service location 2</li>
                <li>Service location 2</li>
                </ul>
-            </div>
+
+
         </div>
-        
-        
+        </div>
+        </div>
+        <!-- page end -->
         
         
         
@@ -38,25 +66,28 @@
 		<div data-role="content">
              <p>Find closest services</p>			
 			<div data-role="fieldcontain" >
-	    </div>	
+	   
 			   Radius to search
                <input type="text" id="distance"/>         
                <input type="button" value="search" id="search"/>   
-               
+               <p>
                <span id="map">map is here</span>
+               </p>
                
+               <p>
                <label for="station_id">Station ID/Name:</label> 
+               <br/>
                <span id="selected">name is here</span>
-               <br>
-               <input type="submit" value="save to favs" id="save"/>  
+               </p>
+               <p>
+               <input type="submit" value="save to favs" id="save"/> 
+               </p>
+            </div>	 
 		</div>
 	</div>
 	<!-- /page -->
-        
-        
-        
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/logbook.js"></script>
+	
+	
     </body>
 </html>
 

@@ -7,10 +7,10 @@
     <feature name="Camera">
         <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
     </feature>
-    <icon density="ldpi" src="platforms/android/res/drawable-ldpi/icon.png" />
-    <icon density="mdpi" src="platforms/android/res/drawable-mdpi/icon.png" />
-    <icon density="hdpi" src="platforms/android/res/drawable-hdpi/icon.png" />
-    <icon density="xhdpi" src="platforms/android/res/drawable-xhdpi/icon.png" />
+    <icon density="ldpi" src="platforms/android/res/drawable-ldpi/toyota_icon.png" />
+    <icon density="mdpi" src="platforms/android/res/drawable-mdpi/toyota_icon.png" />
+    <icon density="hdpi" src="platforms/android/res/drawable-hdpi/toyota_icon.png" />
+    <icon density="xhdpi" src="platforms/android/res/drawable-xhdpi/toyota_icon.png" />
     <splash density="land-hdpi" src="platforms/android/res/drawable-land-hdpi/splash.png" />
     <splash density="land-ldpi" src="platforms/android/res/drawable-land-ldpi/splash.png" />
     <splash density="land-mdpi" src="platforms/android/res/drawable-land-mdpi/splash.png" />
