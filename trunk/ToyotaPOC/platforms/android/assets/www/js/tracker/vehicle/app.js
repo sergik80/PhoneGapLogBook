@@ -1,0 +1,1 @@
+angular.module('vehicleApp', ['ngRoute', 'vehicleControllers', 'LocalStorageModule']);

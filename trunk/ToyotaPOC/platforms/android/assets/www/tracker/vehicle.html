@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html data-ng-app="vehicleApp">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>Vehicle Manager</title>
+        <script type="text/javascript" src="../cordova.js"></script>
+        <script type="text/javascript" src="../js/angular.js"></script>
+        <script type="text/javascript" src="../js/angular-resource.min.js"></script>
+        <script type="text/javascript" src="../js/angular-route.min.js"></script>
+        <script type="text/javascript" src="../js/angular-local-storage.js"></script>
+        <script type="text/javascript" src="../js/tracker/vehicle/filters.js"></script>
+        <script type="text/javascript" src="../js/tracker/vehicle/controllers.js"></script>
+        <script type="text/javascript" src="../js/tracker/vehicle/app.js"></script>
+    </head>
+    <body>
+        <div class="app">
+            <h1>Vehicles</h1>
+            <div data-ng-controller="VehicleController">
+                <div class="event received">
+                	<div>
+	                	Add entry:<br />
+	                	<img src="../img/vehicle.png" id="newVehicleImage" style="width:50px;height:50px" data-ng-click="selectImage()" />
+	                	<input type="hidden" id="newVehicleImageSrc" data-ng-model="newVehicleImage"><br />
+	                	<input type="text" data-ng-model="newVehicleName" placeholder="Vehicle"><br />
+	        			<button data-ng-click="addVehicle(newVehicleImage, newVehicleName)">Add</button>
+        			</div>
+                	<ul>
+                		<li data-ng-repeat="entry in entries">
+                			<span>{{entry.serviceDate | date:"MM/dd/yyyy 'at' h:mma"}}</span>
+                			<span>{{entry.serviceDetails}}</span>
+                			<span>{{entry.serviceCentre}}</span>
+                			<span><input type="button" value="x" data-ng-click="removeService(entry)" /></span>
+               			</li>
+                	</ul>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
