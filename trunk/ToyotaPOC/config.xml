@@ -2,11 +2,63 @@
 <widget id="au.oakton.com.toyotapoc" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>ToyotaPOC</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        The Toyota Phonegap proof of concept app.
     </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+    <author email="jason.woods@oakton.com.au" href="http://jasonwoods.com.au">
+        Jason Woods
     </author>
     <content src="index.html" /> 
     <access origin="*" />
+    <!--<icon src="res/drawable/icon.png" />-->
+    
+    <platform name="android">
+        <icon src="platforms/android/res/drawable-ldpi/toyota_icon.png" density="ldpi" />
+        <icon src="platforms/android/res/drawable-mdpi/toyota_icon.png" density="mdpi" />
+        <icon src="platforms/android/res/drawable-hdpi/toyota_icon.png" density="hdpi" />
+        <icon src="platforms/android/res/drawable-xhdpi/toyota_icon.png" density="xhdpi" />
+    
+        <!-- you can use any density that exists in the Android project -->
+        <splash src="platforms/android/res/drawable-land-hdpi/splash.png" density="land-hdpi"/>
+        <splash src="platforms/android/res/drawable-land-ldpi/splash.png" density="land-ldpi"/>
+        <splash src="platforms/android/res/drawable-land-mdpi/splash.png" density="land-mdpi"/>
+        <splash src="platforms/android/res/drawable-land-xhdpi/splash.png" density="land-xhdpi"/>
+
+        <splash src="platforms/android/res/drawable-port-hdpi/splash.png" density="port-hdpi"/>
+        <splash src="platforms/android/res/drawable-port-ldpi/splash.png" density="port-ldpi"/>
+        <splash src="platforms/android/res/drawable-port-mdpi/splash.png" density="port-mdpi"/>
+        <splash src="platforms/android/res/drawable-port-xhdpi/splash.png" density="port-xhdpi"/>
+    </platform>
+
+    <platform name="ios">
+        <!-- images are determined by width and height. The following are supported -->
+        <splash src="res/screen/ios/Default~iphone.png" width="320" height="480"/>
+        <splash src="res/screen/ios/Default@2x~iphone.png" width="640" height="960"/>
+        <splash src="res/screen/ios/Default-Portrait~ipad.png" width="768" height="1024"/>
+        <splash src="res/screen/ios/Default-Portrait@2x~ipad.png" width="1536" height="2048"/>
+        <splash src="res/screen/ios/Default-Landscape~ipad.png" width="1024" height="768"/>
+        <splash src="res/screen/ios/Default-Landscape@2x~ipad.png" width="2048" height="1536"/>
+        <splash src="res/screen/ios/Default-568h@2x~iphone.png" width="640" height="1136"/>
+        <splash src="res/screen/ios/Default-667h.png" width="750" height="1334"/>
+        <splash src="res/screen/ios/Default-736h.png" width="1242" height="2208"/>
+        <splash src="res/screen/ios/Default-Landscape-736h.png" width="2208" height="1242"/>
+    </platform>
+
+    <platform name="wp8">
+        <!-- images are determined by width and height. The following are supported -->
+        <splash src="res/screen/wp8/SplashScreenImage.jpg" width="768" height="1280"/>
+    </platform>
+
+    <platform name="windows8">
+        <!-- images are determined by width and height. The following are supported -->
+        <splash src="res/screen/windows8/splashscreen.png" width="620" height="300"/>
+    </platform>
+
+    <platform name="blackberry10">
+        <!-- Add a rim:splash element for each resolution and locale you wish -->
+        <!-- http://developer.blackberry.com/html5/documentation/rim_splash_element.html -->
+        <rim:splash src="res/screen/windows8/splashscreen.png"/>
+    </platform>
+
+    <preference name="SplashScreen" value="splash" />
+    <preference name="SplashScreenDelay" value="5000" />
 </widget>
