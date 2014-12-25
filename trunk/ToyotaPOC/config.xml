@@ -9,6 +9,8 @@
     </author>
     <content src="index.html" /> 
     <access origin="*" />
+    
+    
     <!--<icon src="res/drawable/icon.png" />-->
     
     <platform name="android">

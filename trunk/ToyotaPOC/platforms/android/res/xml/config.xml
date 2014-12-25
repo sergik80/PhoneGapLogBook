@@ -7,6 +7,9 @@
     <feature name="Camera">
         <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
     </feature>
+    <feature name="NetworkStatus">
+        <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
+    </feature>
     <icon density="ldpi" src="platforms/android/res/drawable-ldpi/toyota_icon.png" />
     <icon density="mdpi" src="platforms/android/res/drawable-mdpi/toyota_icon.png" />
     <icon density="hdpi" src="platforms/android/res/drawable-hdpi/toyota_icon.png" />
