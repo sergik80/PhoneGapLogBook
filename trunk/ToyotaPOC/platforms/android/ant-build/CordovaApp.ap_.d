@@ -91,6 +91,7 @@ C:\projects\trunk\ToyotaPOC\platforms\android\assets\www\css\index.css \
 C:\projects\trunk\ToyotaPOC\platforms\android\assets\www\css\jquery.mobile-1.4.5.min.css \
 C:\projects\trunk\ToyotaPOC\platforms\android\assets\www\eLogbook\index.html \
 C:\projects\trunk\ToyotaPOC\platforms\android\assets\www\img\logo.png \
+C:\projects\trunk\ToyotaPOC\platforms\android\assets\www\img\tick.jpg \
 C:\projects\trunk\ToyotaPOC\platforms\android\assets\www\img\toyota.png \
 C:\projects\trunk\ToyotaPOC\platforms\android\assets\www\img\tracker \
 C:\projects\trunk\ToyotaPOC\platforms\android\assets\www\img\vehicle.png \
@@ -126,6 +127,7 @@ C:\projects\trunk\ToyotaPOC\platforms\android\assets\www\js\tracker\vehicle \
 C:\projects\trunk\ToyotaPOC\platforms\android\assets\www\js\tracker\vehicle\app.js \
 C:\projects\trunk\ToyotaPOC\platforms\android\assets\www\js\tracker\vehicle\controllers.js \
 C:\projects\trunk\ToyotaPOC\platforms\android\assets\www\locator\index.html \
+C:\projects\trunk\ToyotaPOC\platforms\android\assets\www\locator\serviceLookup.html \
 C:\projects\trunk\ToyotaPOC\platforms\android\assets\www\plugins\org.apache.cordova.camera \
 C:\projects\trunk\ToyotaPOC\platforms\android\assets\www\plugins\org.apache.cordova.dialogs \
 C:\projects\trunk\ToyotaPOC\platforms\android\assets\www\plugins\org.apache.cordova.network-information \
