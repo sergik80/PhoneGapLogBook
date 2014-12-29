@@ -11,19 +11,13 @@
         <script type="text/javascript" src="../cordova.js"></script> 
         <script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
         <script type="text/javascript" src="../js/jquery.mobile-1.4.5.min.js"></script>    
-        <script type="text/javascript" src="../js/angular.js"></script>
-        <script type="text/javascript" src="../js/angular-resource.min.js"></script>
-        <script type="text/javascript" src="../js/angular-route.min.js"></script>
-        <script type="text/javascript" src="../js/angular-local-storage.js"></script>
-        <script type="text/javascript" src="../js/locator/controllers.js"></script>
-        <script type="text/javascript" src="../js/locator/app.js"></script>   
-        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDT51isQ2Hrr9MDwnKAKjcVvaJfc9zId8I&sensor=false"></script>
+        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDT51isQ2Hrr9MDwnKAKjcVvaJfc9zId8I&sensor=false"></script>
         
         <script type="text/javascript" src="../js/locator/json2.js"></script>
-        <script type="text/javascript" src="../js/locator/locator.js"></script> 
+        <script type="text/javascript" src="../js/locator/locator.js"></script>
+   
         <link rel="stylesheet" type="text/css" href="../css/jquery.mobile-1.4.5.min.css" />
-        <link rel="stylesheet" type="text/css" href="../css/index.css" /> 
-                          
+        <link rel="stylesheet" type="text/css" href="../css/index.css" />                     
      
          
       
@@ -40,10 +34,11 @@
 			<h2>Favorite Service Points</h2>
 		</div>   
 		          
-        <div data-role="content">    
+        <div data-role="content" >    
         <button id="internetAccessButton" >Internet Access Enabled</button> 
                        
-               <ul>
+               <ul data-role="listview" >
+               <li id="version" class="serviceList" data-inset="true" data-split-icon="delete" data-filter="true">Service 3</li>
                <li class="serviceList">Service 1</li>
                <li class="serviceList">Service 2</li>
                <li class="serviceList">Service 3</li>
@@ -53,16 +48,14 @@
                 <div id="mapCanvasLookup" style="position: absolute; bottom: 0; left: 0; width: 100%; height: 300px;"></div>
                </p>
 
-
-
-         <button id="internetAccessButton" onclick="location.href = '../locator/serviceLookup.html'" >Lookup New Stations</button> 
+        <button id="lookupRedirect"  
+        style="position: absolute; bottom: 0; left: 0;width: 100%;">lookup service stations</button>
 
         </div>
         </div>
         <!-- page end -->
         
-        
-        
+
                	
  </body>
 </html>

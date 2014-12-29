@@ -1,0 +1,1 @@
+﻿angular.module('logtrip.manual', ['logtrip.manual.controllers']);

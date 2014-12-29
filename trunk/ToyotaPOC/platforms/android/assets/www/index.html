@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html ng-app="ToyotaPOCApp">
+<html>
 <head>
     <meta charset="utf-8" />
     <meta name="format-detection" content="telephone=no" />
@@ -7,41 +7,41 @@
     <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
     <link rel="stylesheet" type="text/css" href="css/index.css" />
-    <title>Hello World</title>
+    <title>Toyota POC</title>
 </head>
 <body>
-    <div class="app">
-        <!-- Header, fixed in all pages -->
-        <h1><img src="img/toyota.png" /> Toyota POC</h1>
+    <div class="app ng-cloak">
+        <!-- Header, fixed at the top -->
+        <div ng-include="'views/header.html'"></div>
 
         <!-- View, injected by Angular -->
         <div ng-view></div>
 
-        <!-- Footer, TODO: add footer buttons here  -->
+        <!-- Footer, fixed at the bottom  -->
+        <div ng-include="'views/footer.html'"></div>
     </div>
 
-
+    <!-- JS Libraries -->
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/angular.js"></script>
     <script type="text/javascript" src="js/angular-resource.min.js"></script>
     <script type="text/javascript" src="js/angular-route.min.js"></script>
     <script type="text/javascript" src="js/angular-local-storage.js"></script>
 
-    <!-- Vehicle -->
-    <script type="text/javascript" src="js/app/vehicle.js"></script>
-    <script type="text/javascript" src="js/app/vehicle.controllers.js"></script>
-
-    <!-- Log trip - GPS Tracker -->
-    <!-- Log trip - Manual Entry -->
-    <!-- View Trips -->
-    <!-- Service Locator -->
-    <!-- app -->
-    <script type="text/javascript" src="js/app/app.js"></script>
-    <!-- bootstrap -->
+    <!-- The following file is created by Gulp. Instrucions are available in /www/gulp-help.txt -->
+    <script type="text/javascript" src="js/toyota-poc.js"></script>
+    
+    <!-- bootstrap Angular when device is ready -->
     <script type="text/javascript">
-        document.addEventListener('deviceready', function () {
-            angular.bootstrap(document, ['ToyotaPOCApp']);
-        }, false);
+        if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/)) {
+            document.addEventListener("deviceready", onDeviceReady, false);
+        } else {
+            onDeviceReady();
+        }
+
+        function onDeviceReady() {
+           angular.bootstrap(document, ['ToyotaPOCApp']);
+        }
     </script>
 </body>
 </html>
