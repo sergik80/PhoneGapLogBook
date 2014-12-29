@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html ng-app="ToyotaPOCApp">
+<html xng-app="ToyotaPOCApp">
 <head>
     <meta charset="utf-8" />
     <meta name="format-detection" content="telephone=no" />
@@ -32,7 +32,8 @@
     <script type="text/javascript" src="js/toyota-poc.js"></script>
 
     <!-- bootstrap Angular when device is ready -->
-    <!-- TODO: has bug with PhoneGap, deviceready event never gets fired!!! -->
+    <!-- has bug with PhoneGap, deviceready event never gets fired!!! -->
+    <!-- woraround: https://issues.apache.org/jira/browse/CB-8042 -->
     <script type="text/javascript">
         if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/)) {
             document.addEventListener("deviceready", onDeviceReady, false);
