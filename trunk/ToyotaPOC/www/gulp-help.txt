@@ -1,0 +1,14 @@
+﻿1- install the following packages in Node.js
+----------------------------------------------
+npm install --global gulp
+npm install --save-dev gulp gulp-concat
+npm install -D gulp-uglify
+npm install -D gulp-ng-annotate
+
+Before building the app by Cordova
+-----------------------------------------------
+Run "gulp js" in Node.js to re-build the minified js file located at "app/js/toyota-poc.js"
+This file is linked on index.html page
+
+
+Reference: https://medium.com/@dickeyxxx/best-practices-for-building-angular-js-apps-266c1a4a6917

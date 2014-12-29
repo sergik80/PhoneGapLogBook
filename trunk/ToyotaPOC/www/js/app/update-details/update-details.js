@@ -1,0 +1,1 @@
+﻿angular.module('update-details', ['driver', 'vehicle']);
