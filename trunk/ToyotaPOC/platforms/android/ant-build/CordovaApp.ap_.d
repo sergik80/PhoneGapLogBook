@@ -121,6 +121,7 @@ C:\projects\trunk\ToyotaPOC\platforms\android\assets\www\js\locator\app.js \
 C:\projects\trunk\ToyotaPOC\platforms\android\assets\www\js\locator\controllers.js \
 C:\projects\trunk\ToyotaPOC\platforms\android\assets\www\js\locator\json2.js \
 C:\projects\trunk\ToyotaPOC\platforms\android\assets\www\js\locator\locator.js \
+C:\projects\trunk\ToyotaPOC\platforms\android\assets\www\js\locator\lookup.js \
 C:\projects\trunk\ToyotaPOC\platforms\android\assets\www\js\tracker\exercisetracker.js \
 C:\projects\trunk\ToyotaPOC\platforms\android\assets\www\js\tracker\json2.js \
 C:\projects\trunk\ToyotaPOC\platforms\android\assets\www\js\tracker\vehicle \
