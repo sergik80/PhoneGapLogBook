@@ -1,1 +1,27 @@
-﻿<h3>log trip details manually</h3>
+<h3>log trip details manually</h3>
+<div data-ng-controller="LogManualController">
+	<div>
+		<script type="text/javascript">
+			alert(allVehicles[0]);
+		</script>
+		<p>Add a trip:</p>
+		<input type="text" data-ng-model="kmFrom"><br />
+		<input type="text" data-ng-model="kmTo"><br />
+		<input type="text" data-ng-model="locationFrom"><br />
+		<input type="text" data-ng-model="locationTo"><br />
+		<input type="text" data-ng-model="dateStart"><br />
+		<input type="text" data-ng-model="dateEnd"><br />
+		<select data-ng-model="natureoftripid">
+			<option data-ng-repeat="entry in allnatureoftrips" value="{{entry.id}}">{{entry.purpose}}</option>
+		</select><br />
+		<select data-ng-model="vehicleid">
+			<option data-ng-repeat="entry in allvehicles" value="{{entry.id}}">{{entry.vehiclerego}}</option>
+		</select><br />
+		<select data-ng-model="driverid">
+			<option data-ng-repeat="entry in alldrivers" value="{{entry.id}}">{{entry.firstname + ' ' + entry.lastname}}</option>
+		</select><br />
+		<button data-ng-click="addTrip(kmFrom, kmTo, vehicleid, natureoftripid, driverid, dateStart, dateEnd, locationFrom, locationTo)">Add</button>
+	</div>
+</div>
+
+                
