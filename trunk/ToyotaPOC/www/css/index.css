@@ -91,26 +91,4 @@ h1 img {
     -webkit-animation:fade 3000ms infinite;
 }
 
-.options {
-	padding-left: 0;
-}
-.options li {
-	list-style-type: none;
-	width: 30%;
-	float: left;
-	text-align: center;
-	padding: 8%;
-	line-height: 20px;
-	border: 2px solid #565656;
-	margin-top: 2px;
-	margin-left: 1%;
-	border-radius: 4px;
-	min-height: 60px;
-	vertical-align: middle;
-}
-.options li a {
-	display: block;
-}
-.options li:nth-child(2n+1) {
-	clear: left;
-}
+ul.row li { list-style-type: none; min-height: 60px; vertical-align: middle; }

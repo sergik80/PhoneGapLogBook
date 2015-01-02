@@ -1,1 +1,25 @@
-﻿<h3>log trip details manually</h3>
+<h3>log trip details manually</h3>
+<form data-ng-controller="LogManualController">
+	<script type="text/javascript">
+		alert(allVehicles[0]);
+	</script>
+	<p>Add a trip:</p>
+	<div class="form-group"><input type="text" data-ng-model="kmFrom" class="form-control"></div>
+	<div class="form-group"><input type="text" data-ng-model="kmTo" class="form-control"></div>
+	<div class="form-group"><input type="text" data-ng-model="locationFrom" class="form-control"></div>
+	<div class="form-group"><input type="text" data-ng-model="locationTo" class="form-control"></div>
+	<div class="form-group"><input type="text" data-ng-model="dateStart" class="form-control"></div>
+	<div class="form-group"><input type="text" data-ng-model="dateEnd" class="form-control"></div>
+	<div class="form-group"><select data-ng-model="natureoftripid" class="form-control">
+		<option data-ng-repeat="entry in allnatureoftrips" value="{{entry.id}}">{{entry.purpose}}</option>
+	</select></div>
+	<div class="form-group"><select data-ng-model="vehicleid" class="form-control">
+		<option data-ng-repeat="entry in allvehicles" value="{{entry.id}}">{{entry.vehiclerego}}</option>
+	</select></div>
+	<div class="form-group"><select data-ng-model="driverid" class="form-control">
+		<option data-ng-repeat="entry in alldrivers" value="{{entry.id}}">{{entry.firstname + ' ' + entry.lastname}}</option>
+	</select></div>
+	<div class="form-group"><button data-ng-click="addTrip(kmFrom, kmTo, vehicleid, natureoftripid, driverid, dateStart, dateEnd, locationFrom, locationTo)" class="btn btn-primary">Add</button></div>
+</form>
+
+                

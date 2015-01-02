@@ -1,1 +1,20 @@
-﻿<h3>Update Vehicle Details</h3>
+<h3>Update Vehicle Details</h3>
+    <div data-ng-controller="VehicleController">
+       	<div>
+        	<p>Add a vehicle:</p>
+       		<input type="text" data-ng-model="newVehicleRego"><br />
+			<button data-ng-click="addVehicle(newVehicleRego)">Add</button>
+		</div>
+
+       	<div><p>all vehicles:</p>
+        	<ul>
+        		<li data-ng-repeat="entry in entries">
+        			<span>{{entry.created | date:"MM/dd/yyyy 'at' h:mma"}}</span> |
+        			<span>{{entry.vehiclerego}}</span> |
+        			<span>{{entry.id}}</span> |
+        			<span><input type="button" value="x" data-ng-click="removeVehicle(entry.id)" /></span>
+       			</li>
+        	</ul>
+		</div>
+	</div>
+                
