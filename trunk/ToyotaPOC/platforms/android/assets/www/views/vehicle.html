@@ -1,18 +1,18 @@
 <h3>Update Vehicle Details</h3>
     <div data-ng-controller="VehicleController">
-       	<div>
-        	<p>Add a vehicle:</p>
-       		<input type="text" data-ng-model="newVehicleRego"><br />
-			<button data-ng-click="addVehicle(newVehicleRego)">Add</button>
-		</div>
+       	<form>
+       		<fieldset>
+	        	<legend>Add a vehicle:</legend>
+	       		<div class="form-group"><input type="text" data-ng-model="newVehicleRego" placeholder="Vehicle name" class="form-control"></div>
+				<div class="form-group"><button data-ng-click="addVehicle(newVehicleRego)" class="btn btn-primary">Add</button></div>
+			</fieldset>
+		</form>
 
        	<div><p>all vehicles:</p>
         	<ul>
         		<li data-ng-repeat="entry in entries">
-        			<span>{{entry.created | date:"MM/dd/yyyy 'at' h:mma"}}</span> |
-        			<span>{{entry.vehiclerego}}</span> |
-        			<span>{{entry.id}}</span> |
-        			<span><input type="button" value="x" data-ng-click="removeVehicle(entry.id)" /></span>
+        			<p>#{{entry.id}} {{entry.created | date:"MM/dd/yyyy 'at' h:mma"}}</p>
+        			<p>{{entry.vehiclerego}} <span><input type="button" value="x" data-ng-click="removeVehicle(entry.id)" class="btn btn-default" /></span></p>p>
        			</li>
         	</ul>
 		</div>

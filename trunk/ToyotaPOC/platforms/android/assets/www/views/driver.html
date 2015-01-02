@@ -1,24 +1,23 @@
 <h3>Update Driver Details:</h3>
 <div data-ng-controller="DriverController">
-    <div>
-      	<p>Add a new driver:</p>
-     	<input type="text" data-ng-model="firstName"><br />
-     	<input type="text" data-ng-model="lastName"><br />
-     	<input type="text" data-ng-model="address"><br />
-		<button data-ng-click="addDriver(firstName, lastName, address)">Add</button>
-	</div>
+    <form>
+    	<fieldset>
+	      	<legend>Add a new driver:</legend>
+	     	<div class="form-group"><input type="text" data-ng-model="firstName" class="form-control"></div>
+	     	<div class="form-group"><input type="text" data-ng-model="lastName" class="form-control"></div>
+	     	<div class="form-group"><input type="text" data-ng-model="address" class="form-control"></div>
+			<div class="form-group"><button data-ng-click="addDriver(firstName, lastName, address)" class="btn btn-primary btn-block">Add</button></div>
+		</fieldset>
+	</form>
 
   <div>
   	<p>List of drivers:</p>
    	<div>
      	<ul>
      		<li data-ng-repeat="entry in entries">
-     			<span>{{entry.created | date:"MM/dd/yyyy 'at' h:mma"}}</span> |
-     			<span>{{entry.firstname}}</span> |
-     			<span>{{entry.lastname}}</span> |
-     			<span>{{entry.address}}</span> |
-     			<span>{{entry.id}}</span> |
-     			<span><input type="button" value="x" data-ng-click="removeDriver(entry.id)" /></span>
+     			<p><span>{{entry.id}}</span> {{entry.created | date:"MM/dd/yyyy 'at' h:mma"}} <span><input type="button" value="x" data-ng-click="removeDriver(entry.id)" /></span></p>
+     			<p>{{entry.firstname}} {{entry.lastname}}</p>
+     			<p>{{entry.address}}</p>
    			</li>
      	</ul>
 	</div>

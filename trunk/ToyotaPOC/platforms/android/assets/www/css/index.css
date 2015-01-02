@@ -91,4 +91,4 @@ h1 img {
     -webkit-animation:fade 3000ms infinite;
 }
 
-ul.row li { list-style-type: none; min-height: 60px; }
+ul.row li { list-style-type: none; min-height: 60px; vertical-align: middle; }
