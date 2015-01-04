@@ -1,5 +1,9 @@
-﻿var app = angular.module('ToyotaPOCApp', [
+﻿"use strict";
+
+var app = angular.module('ToyotaPOCApp', [
     'ngRoute',
+    'settings',
+    'phonegap',
     'viewtrips',
     'logtrip',
     'locator',
@@ -44,3 +48,13 @@ app.config(['$routeProvider',
         });
 }]);
 
+app.run(['$rootScope', 'AppSettings', 'NetworkService', 'NotificationService',
+    function ($rootScope, AppSettings, NetworkService, NotificationService) {
+        NetworkService.startMonitoring();
+        $rootScope.$on(AppSettings.OnNetworkStatusChange, function (event, networkReady) {
+            $rootScope.NetworkReady = networkReady;
+            if (!networkReady) {
+                NotificationService.alert('Lost Network!', 'Network', 'Ok');
+            }
+    });
+}]);

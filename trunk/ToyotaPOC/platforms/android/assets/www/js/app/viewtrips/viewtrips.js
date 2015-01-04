@@ -1,1 +1,1 @@
-﻿angular.module('viewtrips', []);
+﻿angular.module('viewtrips', ['viewtrips.controllers']);

@@ -81,6 +81,7 @@ C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\tracker
 C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\views \
 C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\css\index.css \
 C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\css\jquery.mobile-1.4.5.min.css \
+C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\css\tracking.css \
 C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\eLogbook\index.html \
 C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\img\logo.png \
 C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\img\tick.jpg \
@@ -93,6 +94,7 @@ C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\img\tra
 C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\img\tracker\icons-18-white.png \
 C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\img\tracker\icons-36-black.png \
 C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\img\tracker\icons-36-white.png \
+C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\js\angular-google-maps.min.js \
 C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\js\angular-local-storage.js \
 C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\js\angular-local-storage.min.js \
 C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\js\angular-resource.min.js \
@@ -107,12 +109,20 @@ C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\js\jque
 C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\js\locator \
 C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\js\toyota-poc.js \
 C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\js\tracker \
+C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\js\underscore-min.js \
 C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\js\app\app.js \
 C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\js\app\common \
 C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\js\app\locator \
 C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\js\app\logtrip \
 C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\js\app\update-details \
 C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\js\app\viewtrips \
+C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\js\app\common\models \
+C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\js\app\common\phonegap \
+C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\js\app\common\settings.js \
+C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\js\app\common\phonegap\phonegap.geolocation.js \
+C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\js\app\common\phonegap\phonegap.js \
+C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\js\app\common\phonegap\phonegap.network.js \
+C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\js\app\common\phonegap\phonegap.notification.js \
 C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\js\app\locator\locator.controllers.js \
 C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\js\app\locator\locator.js \
 C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\js\app\logtrip\gpstracker \
@@ -120,6 +130,7 @@ C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\js\app\
 C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\js\app\logtrip\manual \
 C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\js\app\logtrip\gpstracker\logtrip.gpstracker.controllers.js \
 C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\js\app\logtrip\gpstracker\logtrip.gpstracker.js \
+C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\js\app\logtrip\gpstracker\logtrip.gpstracker.services.js \
 C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\js\app\logtrip\manual\logtrip.manual.controllers.js \
 C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\js\app\logtrip\manual\logtrip.manual.js \
 C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\js\app\update-details\driver \

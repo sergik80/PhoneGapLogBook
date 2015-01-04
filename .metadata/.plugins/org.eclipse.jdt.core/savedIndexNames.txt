@@ -1,0 +1,3 @@
+INDEX VERSION 1.127+C:\Projects\PhoneGapLogBook\.metadata\.plugins\org.eclipse.jdt.core
+782203032.index
+1399537736.index

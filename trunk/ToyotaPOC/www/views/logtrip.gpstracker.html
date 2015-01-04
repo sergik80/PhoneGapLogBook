@@ -1,1 +1,11 @@
-﻿<h3>View Google Map, start/stop tracking, display route</h3>
+﻿<div id="map-convas" ui-gmap-google-map center='map.center' zoom='map.zoom'>
+
+    <div ui-gmap-marker coords="startMarker.coords" options="startMarker.options" idkey="'start'">
+    </div>
+
+    <div ui-gmap-marker coords="lastMarker.coords" options="lastMarker.options" idkey="'last'">
+    </div>
+</div>
+
+<button type="button" ng-show="!map.tripInProgress" style="position:fixed; bottom:5%; left:20%; background-color: green; padding:5px; width: 60%" ng-click="startTrip()">Start Trip</button>
+<button type="button" ng-show="map.tripInProgress" style="position:fixed; bottom:5%; left:20%; background-color: yellow; padding:5px; width: 60%" ng-click="endTrip()">End Trip</button>
