@@ -115,3 +115,4 @@ h1 img {
 	clear: left;
 }
 
+ul.row li { list-style-type: none; min-height: 60px; vertical-align: middle; }

@@ -79,6 +79,7 @@ C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\package
 C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\plugins \
 C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\tracker \
 C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\views \
+C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\css\bootstrap.min.css \
 C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\css\index.css \
 C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\css\jquery.mobile-1.4.5.min.css \
 C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\css\tracking.css \
@@ -114,6 +115,7 @@ C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\js\app\
 C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\js\app\common \
 C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\js\app\locator \
 C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\js\app\logtrip \
+C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\js\app\SqlLite \
 C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\js\app\update-details \
 C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\js\app\viewtrips \
 C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\js\app\common\models \
@@ -133,6 +135,7 @@ C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\js\app\
 C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\js\app\logtrip\gpstracker\logtrip.gpstracker.services.js \
 C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\js\app\logtrip\manual\logtrip.manual.controllers.js \
 C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\js\app\logtrip\manual\logtrip.manual.js \
+C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\js\app\SqlLite\SQLLiteServices.js \
 C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\js\app\update-details\driver \
 C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\js\app\update-details\update-details.js \
 C:\Projects\PhoneGapLogBook\trunk\ToyotaPOC\platforms\android\assets\www\js\app\update-details\vehicle \

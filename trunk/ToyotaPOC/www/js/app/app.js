@@ -7,8 +7,14 @@ var app = angular.module('ToyotaPOCApp', [
     'viewtrips',
     'logtrip',
     'locator',
-    'update-details'
-]);
+    'update-details',
+    'SQLservices'
+]).run(function(DB) {
+	DB.openDb();
+    DB.createTables();
+    DB.setupRecords();
+});
+
 
 app.config(['$routeProvider',
   function ($routeProvider) {

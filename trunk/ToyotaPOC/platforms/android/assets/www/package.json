@@ -1,1 +1,5 @@
-{}
+{
+  "devDependencies": {
+    "gulp-ng-annotate": "^0.4.3"
+  }
+}

@@ -6,6 +6,7 @@
     <meta name="msapplication-tap-highlight" content="no" />
     <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <link rel="stylesheet" type="text/css" href="css/tracking.css" />
     <title>Toyota POC</title>
@@ -13,13 +14,13 @@
 <body>
     <div class="app ng-cloak">
         <!-- Header, fixed at the top -->
-        <div ng-include="'views/header.html'"></div>
-        
+        <div class="container" data-ng-include="'views/header.html'"></div>
+
         <!-- View, injected by Angular -->
-        <div id="content-view" ng-view></div>
+        <div class="container" data-ng-view></div>
 
         <!-- Footer, fixed at the bottom  -->
-        <div ng-include="'views/footer.html'"></div>
+        <div class="container" data-ng-include="'views/footer.html'"></div>
     </div>
 
     <!-- JS Libraries -->
