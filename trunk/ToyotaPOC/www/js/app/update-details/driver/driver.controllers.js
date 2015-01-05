@@ -20,3 +20,23 @@ driverControllers.controller('DriverController', ['$q', '$scope', 'Drivers',
 
 		$scope.loadData();
 }]);
+
+driverControllers.controller('EditDriverController', ['$q', '$scope', '$routeParams', '$location', 'Drivers', 
+  	function($q, $scope, $routeParams, $location, Drivers) {
+  		$scope.loadData = function() {
+  			var entryId = $routeParams.id;
+  			Drivers.getById(entryId).then(function(entry,firstname, lastname, address){
+  				$scope.entry = entry;
+  				$scope.firstname = entry.firstname;
+  				$scope.lastname = entry.lastname;
+  				$scope.address = entry.address;
+  			}); 
+  		}
+  		
+  		$scope.updateDriver = function(id, firstname, lastname, address) {
+  			Drivers.update(id, firstname, lastname, address);
+  	 		$location.url("/update/driver");
+  		}
+
+  		$scope.loadData();
+  }]);

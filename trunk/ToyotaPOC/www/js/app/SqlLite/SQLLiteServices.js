@@ -182,6 +182,10 @@ angular.module('SQLservices', []).factory('DB', ['$q','$rootScope',  function($q
         });
     };
 
+    vehicles.update = function(id, registration) {
+        return DB.query('UPDATE Vehicles SET vehiclerego=? WHERE id=?', [registration,id]);
+    };
+
     return vehicles;
 })
 .factory('Drivers', function(DB) {
@@ -215,6 +219,10 @@ angular.module('SQLservices', []).factory('DB', ['$q','$rootScope',  function($q
         });
     };
 
+    drivers.update = function(id, firstname, lastname, address) {
+        return DB.query('UPDATE Drivers SET firstname=?, lastname=?, address=? WHERE id=?', [firstname, lastname, address, id]);
+    };
+
     return drivers;
 })
 .factory('Trips', function(DB) {
@@ -246,6 +254,10 @@ angular.module('SQLservices', []).factory('DB', ['$q','$rootScope',  function($q
         .then(function(result){
             return DB.fetch(result);
         });
+    };
+
+    trips.update = function(id, kmfrom, kmto, vehicleid, natureoftripid, driverid, datestart, dateend, locationfrom, locationto) {
+        return DB.query('UPDATE Trips SET kmfrom=?, kmto=?, vehicleid=?, natureoftripid=?, driverid=?, datestart=?, dateend=?, locationfrom=?, locationto=? WHERE id=?', [kmfrom, kmto, vehicleid, natureoftripid, driverid, datestart, dateend, locationfrom, locationto, id]);
     };
 
     return trips;

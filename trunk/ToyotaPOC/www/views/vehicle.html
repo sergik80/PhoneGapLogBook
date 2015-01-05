@@ -12,7 +12,7 @@
         	<ul>
         		<li data-ng-repeat="entry in entries">
         			<p>#{{entry.id}} (<i>{{entry.created | date:"MM/dd/yyyy 'at' h:mma"}}</i>)</p>
-        			<p>{{entry.vehiclerego}} <span><input type="button" value="x" data-ng-click="removeVehicle(entry.id)" class="btn btn-default" /></span></p>
+        			<p><a href='#/update/editvehicle/{{entry.id}}'>{{entry.vehiclerego}} </a><span><input type="button" value="x" data-ng-click="removeVehicle(entry.id)" class="btn btn-default" /></span></p>
        			</li>
         	</ul>
 		</div>
