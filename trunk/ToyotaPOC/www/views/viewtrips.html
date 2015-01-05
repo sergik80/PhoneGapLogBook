@@ -1,21 +1,12 @@
 <h3>View trips and edit selected</h3>
-
-<div data-ng-controller="ViewTripsController">
-       	<div>
-        	<ul>
-        		<li data-ng-repeat="entry in entries">
-        			<span>{{entry.created | date:"MM/dd/yyyy 'at' h:mma"}}</span> |
-        			<span>{{entry.kmfrom}}</span> |
-        			<span>{{entry.kmto}}</span> |
-        			<span>{{entry.locationfrom}}</span> |
-        			<span>{{entry.locationto}}</span> |
-        			<span>{{entry.datestart | date:"MM/dd/yyyy 'at' h:mma"}}</span> |
-        			<span>{{entry.dateend | date:"MM/dd/yyyy 'at' h:mma"}}</span> |
-        			<span>{{entry.id}}</span> |
-        			<span><input type="button" value="x" data-ng-click="removeTrip(entry.id)" /></span>
-				    <span><a href='#/update/edittrip/{{entry.id}}'>Edit</a></span>
-       			</li>
-        	</ul>
-		</div>
-</div>
-		
+  <div>
+   	<ul>
+   		<li data-ng-repeat="entry in entries">
+   			<p>#<span>{{entry.id}}</span> (<i>{{entry.created | date:"MM/dd/yyyy 'at' h:mma"}}</i>) <span><input type="button" value="x" data-ng-click="removeTrip(entry.id)" class="btn btn-default" /></span></p>
+   			<p><a href='#/update/edittrip/{{entry.id}}'>Odometer: {{entry.kmfrom}} - {{entry.kmto}}</a></p>
+   			<p>Location: {{entry.locationfrom}} - {{entry.locationto}}</p>
+   			<p>Dates: {{entry.datestart | date:"MM/dd/yyyy 'at' h:mma"}} - {{entry.dateend | date:"MM/dd/yyyy 'at' h:mma"}}</p>
+		</li>
+   	</ul>
+ </div>
+ 
