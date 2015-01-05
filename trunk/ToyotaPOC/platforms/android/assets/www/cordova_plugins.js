@@ -56,6 +56,13 @@ module.exports = [
         "clobbers": [
             "Connection"
         ]
+    },
+    {
+        "file": "plugins/com.brodysoft.sqlitePlugin/www/SQLitePlugin.js",
+        "id": "com.brodysoft.sqlitePlugin.SQLitePlugin",
+        "clobbers": [
+            "SQLitePlugin"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -64,7 +71,8 @@ module.exports.metadata =
     "org.apache.cordova.geolocation": "0.3.11",
     "org.apache.cordova.dialogs": "0.2.11",
     "org.apache.cordova.camera": "0.3.4",
-    "org.apache.cordova.network-information": "0.2.15-dev"
+    "org.apache.cordova.network-information": "0.2.15-dev",
+    "com.brodysoft.sqlitePlugin": "1.0.3"
 }
 // BOTTOM OF METADATA
 });

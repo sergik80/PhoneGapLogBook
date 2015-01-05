@@ -3,23 +3,52 @@
 	<script type="text/javascript">
 		alert(allVehicles[0]);
 	</script>
-	<p>Add a trip:</p>
-	<div class="form-group"><input type="text" data-ng-model="kmFrom" class="form-control"></div>
-	<div class="form-group"><input type="text" data-ng-model="kmTo" class="form-control"></div>
-	<div class="form-group"><input type="text" data-ng-model="locationFrom" class="form-control"></div>
-	<div class="form-group"><input type="text" data-ng-model="locationTo" class="form-control"></div>
-	<div class="form-group"><input type="text" data-ng-model="dateStart" class="form-control"></div>
-	<div class="form-group"><input type="text" data-ng-model="dateEnd" class="form-control"></div>
-	<div class="form-group"><select data-ng-model="natureoftripid" class="form-control">
-		<option data-ng-repeat="entry in allnatureoftrips" value="{{entry.id}}">{{entry.purpose}}</option>
-	</select></div>
-	<div class="form-group"><select data-ng-model="vehicleid" class="form-control">
-		<option data-ng-repeat="entry in allvehicles" value="{{entry.id}}">{{entry.vehiclerego}}</option>
-	</select></div>
-	<div class="form-group"><select data-ng-model="driverid" class="form-control">
-		<option data-ng-repeat="entry in alldrivers" value="{{entry.id}}">{{entry.firstname + ' ' + entry.lastname}}</option>
-	</select></div>
-	<div class="form-group"><button data-ng-click="addTrip(kmFrom, kmTo, vehicleid, natureoftripid, driverid, dateStart, dateEnd, locationFrom, locationTo)" class="btn btn-primary btn-block">Add</button></div>
+	<fieldset>
+		<legend>Add a trip:</legend>
+		<div class="form-group">
+			<label for="locationFrom">From</label>
+			<input type="text" id="locationFrom" data-ng-model="locationFrom" class="form-control" placeholder="Location">
+		</div>
+		<div class="form-group">
+			<label for="locationTo">To</label>
+			<input type="text" id="locationTo" data-ng-model="locationTo" class="form-control" placeholder="Location">
+		</div>
+			<div class="form-group">
+			<label for="kmFrom">KM Start</label>
+			<input type="number" id="kmFrom" data-ng-model="kmFrom" class="form-control" placeholder="eg. 1234000">
+		</div>
+		<div class="form-group">
+			<label for="kmTo">KM End</label>
+			<input type="number" id="kmTo" data-ng-model="kmTo" class="form-control" placeholder="eg. 1234500">
+		</div>
+		<div class="form-group">
+			<label for="dateFrom">Date From</label>
+			<input type="date" id="dateFrom" data-ng-model="dateStart" class="form-control" placeholder="04/01/2014">
+		</div>
+		<div class="form-group">
+			<label for="dateTo">Date To</label>
+			<input type="date" id="dateTo" data-ng-model="dateEnd" class="form-control" placeholder="05/01/2015">
+		</div>
+		<div class="form-group">
+			<label for="natureOfTrip">Nature of trip</label>
+			<select data-ng-model="natureoftripid" id="natureOfTrip" class="form-control">
+				<option data-ng-repeat="entry in allnatureoftrips" value="{{entry.id}}">{{entry.purpose}}</option>
+			</select>
+		</div>
+		<div class="form-group">
+			<label for="vehicle">Vehicle</label>
+			<select data-ng-model="vehicleid" id="vehicle" class="form-control">
+				<option data-ng-repeat="entry in allvehicles" value="{{entry.id}}">{{entry.vehiclerego}}</option>
+			</select>
+		</div>
+		<div class="form-group">
+			<label for="driver">Driver</label>
+			<select data-ng-model="driverid" id="driver" class="form-control">
+				<option data-ng-repeat="entry in alldrivers" value="{{entry.id}}">{{entry.firstname + ' ' + entry.lastname}}</option>
+			</select>
+		</div>
+		<button data-ng-click="addTrip(kmFrom, kmTo, vehicleid, natureoftripid, driverid, dateStart, dateEnd, locationFrom, locationTo)" class="btn btn-primary btn-block">Add</button>
+	</fieldset>
 </form>
 
                 

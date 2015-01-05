@@ -10,9 +10,9 @@ var app = angular.module('ToyotaPOCApp', [
     'update-details',
     'SQLservices'
 ]).run(function(DB) {
-	DB.openDb();
-    DB.createTables();
-    DB.setupRecords();
+	//DB.openDb();
+    //DB.createTables();
+    //DB.setupRecords();
 });
 
 

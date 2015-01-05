@@ -17,28 +17,29 @@
         <div class="container" data-ng-include="'views/header.html'"></div>
 
         <!-- View, injected by Angular -->
-        <div class="container" data-ng-view></div>
+        <div class="container main-container" data-ng-view></div>
 
         <!-- Footer, fixed at the bottom  -->
         <div class="container" data-ng-include="'views/footer.html'"></div>
     </div>
 
     <!-- JS Libraries -->
-    <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="js/angular.js"></script>
-    <script type="text/javascript" src="js/angular-resource.min.js"></script>
-    <script type="text/javascript" src="js/angular-route.min.js"></script>
-    <script type="text/javascript" src="js/angular-local-storage.js"></script>
-    <script type="text/javascript" src="js/underscore-min.js"></script>
-    <script type="text/javascript" src="js/angular-google-maps.min.js"></script>
+    <script src="cordova.js"></script>
+    <script src="js/angular.js"></script>
+    <script src="js/angular-resource.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <script src="js/angular-local-storage.js"></script>
+    <script src="js/underscore-min.js"></script>
+    <script src="js/lodash.min.js"></script>
+    <script src="js/angular-google-maps.min.js"></script>
 
     <!-- The following file is created by Gulp. Instrucions are available in /www/gulp-help.txt -->
-    <script type="text/javascript" src="js/toyota-poc.js"></script>
+    <script src="js/toyota-poc.js"></script>
 
     <!-- bootstrap Angular when device is ready -->
     <!-- has bug with PhoneGap, deviceready event never gets fired!!! -->
     <!-- workaround: https://issues.apache.org/jira/browse/CB-8042 -->
-    <script type="text/javascript">
+    <script>
         if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/)) {
             document.addEventListener("deviceready", onDeviceReady, false);
         } else {

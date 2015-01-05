@@ -1,23 +1,21 @@
-﻿var gpsTrackerControllers = angular.module('logtrip.gpstracker.controllers', ['phonegap', 'settings']);
+﻿angular.module('logtrip.gpstracker.controllers', ['phonegap', 'settings', 'uiGmapgoogle-maps'])
 
-gpsTrackerControllers.controller('GPSTrackerController', ['$scope', 'AppSettings', 'uiGmapGoogleMapApi', 'GeolocationService', '$log', function ($scope, AppSettings, uiGmapGoogleMapApi, GeolocationService, $log) {
-    var controller = this;
+.controller('GPSTrackerController', ['$scope', 'AppSettings', '$log', 'uiGmapGoogleMapApi', 'GeolocationService', function ($scope, AppSettings, $log, GoogleMapApi, GeolocationService) {
 
     // Map Startup
-    uiGmapGoogleMapApi.then(function (maps) {
-        GeolocationService.getCurrentPosition(setupMap);
+    GoogleMapApi.then(function (maps) {
+        GeolocationService.getCurrentPosition(function (position) {
+            $log.debug('setupMap');
+            $scope.map = { tripInProgress: false, center: { latitude: position.coords.latitude, longitude: position.coords.longitude }, zoom: AppSettings.map_zoom };
+
+            $scope.startMarker = createMarker(position);
+            $log.debug(JSON.stringify(position));
+        });
     });
-
-    function setupMap(position) {
-        $log.debug('setupMap');
-        $scope.map = { tripInProgress: false, center: { latitude: position.coords.latitude, longitude: position.coords.longitude }, zoom: AppSettings.map_zoom };
-
-        $scope.startMarker = createMarker(position);
-        $log.debug(JSON.stringify(position));
-    }
     
     // UI Action: Start Trip
     $scope.startTrip = function () {
+    	$log.debug("Starting trip");
         GeolocationService.getCurrentPosition(function (position) {
             $log.debug(JSON.stringify(position));   
             if (!$scope.map.tripInProgress) {
@@ -35,19 +33,28 @@ gpsTrackerControllers.controller('GPSTrackerController', ['$scope', 'AppSettings
             $log.debug(JSON.stringify(error));
         });
     };
-
-    function createMarker(position) {
-        return { coords: { latitude: position.coords.latitude, longitude: position.coords.longitude }, options: {} };
-    }
-
+    
     // UI Action: End Trip
     $scope.endTrip = function () {
+    	$log.debug("Ending trip");
+    	
         var trackingData = GeolocationService.clearWatch();
         $scope.map.tripInProgress = false;
 
         $log.debug('total km:' + gps_total_km(trackingData));
         // TODO: Save Tip
         // TODO: Move to Edit Trip Page
+    };
+    
+    // test 
+    $scope.simulateTracking = function(){
+        $interval(function () {
+            $scope.lastMarker.coords.latitude = $scope.lastMarker.coords.latitude + 0.01;
+        }, 3000);
+    }
+
+    function createMarker(position) {
+        return { coords: { latitude: position.coords.latitude, longitude: position.coords.longitude }, options: {} };
     };
     
     // calculates total trip in KM
@@ -67,7 +74,7 @@ gpsTrackerControllers.controller('GPSTrackerController', ['$scope', 'AppSettings
         var total_km_rounded = total_km.toFixed(2);
 
         return total_km_rounded;
-    }
+    };
 
     // calculates distance in KM
     function gps_distance(lat1, lon1, lat2, lon2) {
@@ -84,13 +91,6 @@ gpsTrackerControllers.controller('GPSTrackerController', ['$scope', 'AppSettings
         var d = R * c;
 
         return d;
-    }
+    };
 
-    // test 
-    $scope.simulateTracking = function(){
-        $interval(function () {
-            $scope.lastMarker.coords.latitude = $scope.lastMarker.coords.latitude + 0.01;
-        }, 3000);
-    }
-    
 }]);
