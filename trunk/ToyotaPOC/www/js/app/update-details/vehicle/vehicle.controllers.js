@@ -19,3 +19,22 @@ vehicleControllers.controller(	'VehicleController', [ '$q', '$scope', 'Vehicles'
 		
 		$scope.loadData();
 }]);
+
+vehicleControllers.controller(	'EditVehicleController', [ '$q', '$scope', '$routeParams', '$location'  , 'Vehicles',
+ 	function($q, $scope, $routeParams, $location, Vehicles) {
+ 		$scope.loadData = function() {
+ 			var entryId = $routeParams.id;
+ 			Vehicles.getById(entryId).then(function(entry,vehiclerego){
+ 				$scope.entry = entry;
+ 				$scope.vehiclerego = entry.vehiclerego;
+ 			}); 
+ 		}
+ 		
+ 		$scope.updateVehicle = function(id, registration) {
+ 			Vehicles.update(id, registration);
+ 	 		$location.url("/update/vehicle");
+ 		}
+ 		
+ 		$scope.loadData();
+ }]);
+

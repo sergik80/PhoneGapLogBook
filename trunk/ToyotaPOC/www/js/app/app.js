@@ -2,6 +2,7 @@
 
 var app = angular.module('ToyotaPOCApp', [
     'ngRoute',
+    'edittrip',
     'settings',
     'phonegap',
     'viewtrips',
@@ -10,9 +11,9 @@ var app = angular.module('ToyotaPOCApp', [
     'update-details',
     'SQLservices'
 ]).run(function(DB) {
-	//DB.openDb();
-    //DB.createTables();
-    //DB.setupRecords();
+	DB.openDb();
+    DB.createTables();
+    DB.setupRecords();
 });
 
 
@@ -37,6 +38,10 @@ app.config(['$routeProvider',
             templateUrl: 'views/logtrip.manual.html',
             controller: 'LogManualController'
         }).
+        when('/update/edittrip/:id', {
+            templateUrl: 'views/edittrip.html',
+            controller: 'EditTripController'
+        }).
         when('/updatedetails', {
             templateUrl: 'views/update-details.html'
         }).
@@ -44,9 +49,17 @@ app.config(['$routeProvider',
             templateUrl: 'views/driver.html',
             controller: 'DriverController'
         }).
+        when('/update/editdriver/:id', {
+            templateUrl: 'views/editdriver.html',
+            controller: 'EditDriverController'
+        }).
         when('/update/vehicle', {
             templateUrl: 'views/vehicle.html',
             controller: 'VehicleController'
+        }).
+        when('/update/editvehicle/:id', {
+            templateUrl: 'views/editvehicle.html',
+            controller: 'EditVehicleController'
         }).
         when('/locator', {
             templateUrl: 'views/locator.html',
