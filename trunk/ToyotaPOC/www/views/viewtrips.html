@@ -2,10 +2,9 @@
   <div>
    	<ul>
    		<li data-ng-repeat="entry in entries">
-   			<p>#<span>{{entry.id}}</span> (<i>{{entry.created | date:"MM/dd/yyyy 'at' h:mma"}}</i>) <span><input type="button" value="x" data-ng-click="removeTrip(entry.id)" class="btn btn-default" /></span></p>
-   			<p><a href='#/update/edittrip/{{entry.id}}'>Odometer: {{entry.kmfrom}} - {{entry.kmto}}</a></p>
-   			<p>Location: {{entry.locationfrom}} - {{entry.locationto}}</p>
-   			<p>Dates: {{entry.datestart | date:"MM/dd/yyyy 'at' h:mma"}} - {{entry.dateend | date:"MM/dd/yyyy 'at' h:mma"}}</p>
+   			<p><a href='#/update/edittrip/{{entry.id}}'>From {{entry.locationfrom}} To {{entry.locationto}}</a> <span><input type="button" value="x" data-ng-click="removeTrip(entry.id)" class="btn btn-default" /></span></p>
+   			<p>Odometer: {{entry.kmfrom}} km - {{entry.kmto}} km</p>
+   			<p>Trip started {{entry.datestart | date:"MM/dd/yyyy 'at' h:mma"}} and ended {{entry.dateend | date:"MM/dd/yyyy 'at' h:mma"}}</p>
 		</li>
    	</ul>
  </div>
