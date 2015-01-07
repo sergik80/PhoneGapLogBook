@@ -1,44 +1,31 @@
+var serviceId;
+
+
 window.addEventListener('load', function () {
 document.addEventListener("deviceready", function(){
-
+	
 	
 	var connState = navigator.connection.type;
 	if( connState == Connection.NONE){
+		
 		$("#internetAccessButton")
 		.text('No Internet Access')
 		.button('refresh');
 	}
 	else{
+	
 		$("#internetAccessButton")
 		.text('Connected to ' + connState + " network" )
 	    .button('refresh');
-	}	
+		
+	}
+	
+	
 });
 }, false);
 
 
 
-var serviceId;
-var versNum = 0;
-$(document).ready(function() {
-    $(".serviceList").click(function() {
-    	serviceId = $(this).html();
-        navigator.geolocation.watchPosition(success, error, { timeout: 60000, maximumAge:60000, enableHighAccuracy: true });
-    });
-});
-
-
-
-
-function success(result)
-{
-	var coords = result.coords;	
-	showPosition(coords.longitude, coords.latitude, serviceId);
-}
-
-function error(error){
-	alert(error.code + " " + error.message);
-}
 
 
 
@@ -47,10 +34,6 @@ function showPosition(longitude, latitude, serviceId)
     var directionsService = new google.maps.DirectionsService();
     var directionsDisplay = new google.maps.DirectionsRenderer();
     
-	var version = document.getElementById('version');
-	versNum += 1;
-	version.innerHTML = versNum;
-	
 	var canvas = document.getElementById('mapCanvasLookup');	
 	// Set the initial Lat and Long of the Google Map
 	var myLatLng = new google.maps.LatLng(latitude, longitude);
@@ -88,20 +71,17 @@ function showPosition(longitude, latitude, serviceId)
 
 function getServiceLatLng(serviceId)
 {
-	switch(serviceId)
+	var positions = getPositions();
+	
+	for(i = 0; i < positions.length; i++)
 	{
-	case 'Service 1':
-		return new google.maps.LatLng(-33.8587, 151.2140);
-		
-	case 'Service 2':
-		return new google.maps.LatLng(-33.8587, 151.2140);
-		
-	case 'Service 3':
-		return new google.maps.LatLng(-33.8587, 151.2140);
-		
-		default:
-			return new google.maps.LatLng(-33.8587, 151.2140);
+		if(serviceId == positions[i].address)
+		{
+			return new google.maps.LatLng(positions[i].latitude, positions[i].long);
+		}
 	}
+	
+  return ;
 }
 
 
@@ -113,5 +93,60 @@ $(document).ready(function(){
 		window.location = '../locator/serviceLookup.html';
 	});
 });
-/////////////////////////////////////////////////////////////////
 
+
+
+
+
+$(document).on("pageinit", "#favouriteServices", function () {
+    //get entries from DB
+    loadFavs();
+});
+
+
+function loadFavs()
+{	
+	  var positions = getPositions();
+	  if (positions == null)
+		  positions = [];
+ 	
+	 
+      for(var i = 0; i < positions.length; i++ )
+      {
+          var li = '<li class="listItem">' + positions[i].address + '</li>';
+          $("#favServices").append(li);   
+      }
+      $("#favServices").listview('refresh');
+     
+      $('.listItem').on('click', function()
+			  {
+	            alert($(this).html());	
+	            serviceId = $(this).html();
+				navigator.geolocation.watchPosition(success, error, { timeout: 60000, maximumAge:50000 });
+			  });
+}
+
+
+function success(result)
+{
+	var coords = result.coords;
+	showPosition(coords.longitude, coords.latitude, serviceId);
+}
+
+function error(error){
+	alert(error.code + " " + error.message);
+}
+
+
+
+
+function getPositions()
+{
+	var _db = window.localStorage;
+	var positions = JSON.parse(_db.getItem('positions'));
+	
+	  if (positions == null)
+		    positions = [];
+		 
+		  return positions;
+}
