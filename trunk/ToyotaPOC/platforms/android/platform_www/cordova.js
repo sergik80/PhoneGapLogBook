@@ -507,17 +507,30 @@ function each(objects, func, context) {
     }
 }
 
+//function clobber(obj, key, value) {
+//    exports.replaceHookForTesting(obj, key);
+//    obj[key] = value;
+//    // Getters can only be overridden by getters.
+//    if (obj[key] !== value) {
+//        utils.defineGetter(obj, key, function() {
+//            return value;
+//        });
+//    }
+//}
+// https://issues.apache.org/jira/browse/CB-8042
+
 function clobber(obj, key, value) {
     exports.replaceHookForTesting(obj, key);
-    obj[key] = value;
+    var needsProperty = false;
+    try { obj[key] = value; }
+    catch (e) { needsProperty = true; }
     // Getters can only be overridden by getters.
-    if (obj[key] !== value) {
-        utils.defineGetter(obj, key, function() {
+    if (needsProperty || obj[key] !== value) {
+        utils.defineGetter(obj, key, function () {
             return value;
         });
     }
 }
-
 function assignOrWrapInDeprecateGetter(obj, key, value, message) {
     if (message) {
         utils.defineGetter(obj, key, function() {

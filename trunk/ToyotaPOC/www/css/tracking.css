@@ -1,0 +1,4 @@
+html, body{ height: 100%; min-height: 100%}
+.app, .main-container { height: 100%; }
+.angular-google-map, .angular-google-map-container { height: 400px; }
+#map-convas, #content-view { height: 100%;}

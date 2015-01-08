@@ -1,0 +1,7 @@
+<ui-gmap-google-map center='map.center' zoom='map.zoom'>
+    <ui-gmap-marker coords="startMarker.coords" options="startMarker.options" idkey="'start'"></ui-gmap-marker>
+    <ui-gmap-marker coords="lastMarker.coords" options="lastMarker.options" idkey="'last'"></ui-gmap-marker>
+</ui-gmap-google-map>
+
+<button type="button" data-ng-show="!map.tripInProgress" style="position:fixed; bottom:5%; left:20%; background-color: green; padding:5px; width: 60%" data-ng-click="startTrip()">Start Trip</button>
+<button type="button" data-ng-show="map.tripInProgress" style="position:fixed; bottom:5%; left:20%; background-color: yellow; padding:5px; width: 60%" data-ng-click="endTrip()">End Trip</button>

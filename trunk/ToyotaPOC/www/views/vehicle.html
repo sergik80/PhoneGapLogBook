@@ -1,0 +1,20 @@
+<h3>Vehicles</h3>
+    <div>
+       	<form>
+       		<fieldset>
+	        	<legend>Add a vehicle:</legend>
+	       		<div class="form-group"><input type="text" data-ng-model="newVehicleRego" placeholder="Vehicle name" class="form-control"></div>
+				<div class="form-group"><button data-ng-click="addVehicle(newVehicleRego)" class="btn btn-primary">Add</button></div>
+			</fieldset>
+		</form>
+
+       	<div><p>all vehicles:</p>
+        	<ul>
+        		<li data-ng-repeat="entry in entries">
+        			<p>#{{entry.id}} (<i>{{entry.created | date:"MM/dd/yyyy 'at' h:mma"}}</i>)</p>
+        			<p><a href='#/update/editvehicle/{{entry.id}}'>{{entry.vehiclerego}} </a><span><input type="button" value="x" data-ng-click="removeVehicle(entry.id)" class="btn btn-default" /></span></p>
+       			</li>
+        	</ul>
+		</div>
+	</div>
+                

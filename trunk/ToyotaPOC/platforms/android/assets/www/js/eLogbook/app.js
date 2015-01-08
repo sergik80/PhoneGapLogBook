@@ -1,1 +1,0 @@
-angular.module('logbookApp', ['ngRoute', 'logbookControllers', 'logbookFilters', 'LocalStorageModule']);

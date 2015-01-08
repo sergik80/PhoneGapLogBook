@@ -32,4 +32,10 @@ C:\projects\trunk\ToyotaPOC\platforms\android\ant-build\classes\org\apache\cordo
 C:\projects\trunk\ToyotaPOC\platforms\android\ant-build\classes\org\apache\cordova\networkinformation\NetworkManager.class \
 C:\projects\trunk\ToyotaPOC\platforms\android\ant-build\classes\org\apache\cordova\R$drawable.class \
 C:\projects\trunk\ToyotaPOC\platforms\android\ant-build\classes\org\apache\cordova\R.class \
+C:\projects\trunk\ToyotaPOC\platforms\android\ant-build\classes\org\pgsqlite\SQLitePlugin$1.class \
+C:\projects\trunk\ToyotaPOC\platforms\android\ant-build\classes\org\pgsqlite\SQLitePlugin$Action.class \
+C:\projects\trunk\ToyotaPOC\platforms\android\ant-build\classes\org\pgsqlite\SQLitePlugin$DBQuery.class \
+C:\projects\trunk\ToyotaPOC\platforms\android\ant-build\classes\org\pgsqlite\SQLitePlugin$DBRunner.class \
+C:\projects\trunk\ToyotaPOC\platforms\android\ant-build\classes\org\pgsqlite\SQLitePlugin$QueryType.class \
+C:\projects\trunk\ToyotaPOC\platforms\android\ant-build\classes\org\pgsqlite\SQLitePlugin.class \
 C:\projects\trunk\ToyotaPOC\platforms\android\ant-build\dexedLibs\classes-3222696c2cc1cb9cead7cdf1c6a5aa21.jar \

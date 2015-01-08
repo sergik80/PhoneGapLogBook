@@ -1,0 +1,35 @@
+        <!-- page -->
+        <div data-role="page" id="favouriteServices">  
+             
+		<div data-role="header">
+			<h3>Favorite Service Stations</h3>
+		</div>   
+	 
+        <div data-role="content" >    
+    	<button id="internetAccessButton" >{{networkStatus}}</button> 
+       
+          <div id="mapCanvasLookup" style="position: relative; width: 100%; 
+          height: 250px;"></div>
+               
+           <ul data-role="listview" data-theme="g">
+           <li ng-repeat="servicePosition in serviceList" ng-click="getRoute(servicePosition.address)">{{servicePosition.address}}</li>
+           </ul>
+          
+                   
+        </div>
+ 
+         <a href="#/lookup" class="btn btn-default">lookup service stations</a>
+       
+        </div>
+        <!-- page end -->
+        
+               	
+
+
+
+
+
+        
+
+
+

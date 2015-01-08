@@ -91,7 +91,7 @@ h1 img {
     -webkit-animation:fade 3000ms infinite;
 }
 
-.options {
+/*.options {
 	padding-left: 0;
 }
 .options li {
@@ -113,4 +113,6 @@ h1 img {
 }
 .options li:nth-child(2n+1) {
 	clear: left;
-}
+}*/
+
+ul.row li { list-style-type: none; min-height: 60px; vertical-align: middle; }
