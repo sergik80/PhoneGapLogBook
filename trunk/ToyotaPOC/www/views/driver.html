@@ -15,9 +15,7 @@
    	<div>
      	<ul>
      		<li data-ng-repeat="entry in entries">
-     			<p>#<span>{{entry.id}}</span> (<i>{{entry.created | date:"MM/dd/yyyy 'at' h:mma"}}</i>) <span><input type="button" value="x" data-ng-click="removeDriver(entry.id)" class="btn btn-default" /></span></p>
-     			<p><a href='#/update/editdriver/{{entry.id}}'>{{entry.firstname}} {{entry.lastname}}</a></p>
-     			<p>{{entry.address}}</p>
+     			<p>#<span>{{entry.id}}</span> - <a href='#/update/editdriver/{{entry.id}}'>{{entry.firstname}} {{entry.lastname}}</a> - {{entry.address}} - (<i>{{entry.created | date:"MM/dd/yyyy 'at' h:mma"}}</i>) <span><input type="button" value="x" data-ng-click="removeDriver(entry.id)" class="btn btn-default" /></span></p>
    			</li>
      	</ul>
 	</div>
