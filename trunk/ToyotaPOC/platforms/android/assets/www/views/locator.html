@@ -2,7 +2,7 @@
         <div data-role="page" id="favouriteServices">  
              
 		<div data-role="header">
-			<h3>Favorite Service Stations</h3>
+			<h4>Favorite Service Stations</h4>
 		</div>   
 	 
         <div data-role="content" >    
@@ -12,13 +12,20 @@
           height: 250px;"></div>
                
            <ul data-role="listview" data-theme="g">
-           <li ng-repeat="servicePosition in serviceList" ng-click="getRoute(servicePosition.address)">{{servicePosition.address}}</li>
+                <li data-ng-repeat="servicePosition in serviceList" data-ng-click="getRoute(servicePosition.address)">
+                    {{servicePosition.address}}
+                 <span><input type="button" value="x" data-ng-click="removeServiceStation(servicePosition.address)" class="btn btn-default" /></span>
+                </li>
            </ul>
+          
+          
+
+          
           
                    
         </div>
  
-         <a href="#/lookup" class="btn btn-default">lookup service stations</a>
+         <a href="#/lookup" class="btn btn-primary btn-block">lookup service stations</a>
        
         </div>
         <!-- page end -->

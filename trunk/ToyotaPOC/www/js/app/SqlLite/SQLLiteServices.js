@@ -17,7 +17,8 @@ angular.module('SQLservices', []).factory('DB', ['$q','$rootScope',  function($q
 	        tx.executeSql('CREATE TABLE IF NOT EXISTS Drivers (id integer primary key, firstname text, lastname text, address text, created datetime)');
 	        tx.executeSql('CREATE TABLE IF NOT EXISTS NatureOfTrip (id integer primary key, purpose text, created datetime)');
 	        tx.executeSql('CREATE TABLE IF NOT EXISTS Trips (id integer primary key, kmfrom integer, kmto integer, vehicleid integer, natureoftripid integer, driverid integer, datestart datetime, dateend datetime, locationfrom text, locationto text, created datetime, FOREIGN KEY(vehicleid) REFERENCES Vehicles(id), FOREIGN KEY(natureoftripid) REFERENCES NatureOfTrip(id), FOREIGN KEY(driverid) REFERENCES Drivers(id))');
-	    });
+	        tx.executeSql('CREATE TABLE IF NOT EXISTS ToyotaStation (id integer primary key, datetime datetime, address text, latitude text, long text)');
+		});
 	}
 
 	self.setupRecords = function(){
@@ -83,6 +84,23 @@ angular.module('SQLservices', []).factory('DB', ['$q','$rootScope',  function($q
 	    				}
 	    			},    	
 	    			self.onError);
+	    	
+	    	tx.executeSql(
+	    			'SELECT * FROM ToyotaStation',
+	    			[],
+	    			function (tx,result){
+	    				if(result.rows.length <= 0)
+	    				{
+	    				    tx.executeSql("INSERT INTO ToyotaStation  (datetime, long, latitude, address) VALUES (?,?,?,?)", ["2014-12-20","151.052831",'-33.858740',"Lidcombe NSW Australia"], function(tx, res) {
+	    				    	self.onSuccess,
+	    				    	self.onError
+	    				      });
+	    				} 
+	    			},
+	    			self.onError);
+
+	    	
+	    	
 	    });
 	}
 
@@ -105,10 +123,12 @@ angular.module('SQLservices', []).factory('DB', ['$q','$rootScope',  function($q
 	};
 
 	self.onSuccess = function(tx, r) {
-	    console.log("SQLite query was successful!");
+		alert('sql ok');
+		console.log("SQLite query was successful!");
 	}
 
 	self.onError = function(tx, e) {
+		alert('sql');
 	    console.log("SQLite Error: " + e.message);
 	}
  
