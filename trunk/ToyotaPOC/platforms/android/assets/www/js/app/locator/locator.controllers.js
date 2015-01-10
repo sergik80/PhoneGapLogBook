@@ -170,7 +170,7 @@ locatorControllers.controller('LocatorController', function($scope)
 
 
 
-locatorControllers.controller('LookupController', function($scope) 
+locatorControllers.controller('LookupController', ['$log',function($scope) 
 {
 	var MAX_POSITIONS = 50;
 	$scope.getCurrentPosition = function() {
@@ -203,7 +203,7 @@ locatorControllers.controller('LookupController', function($scope)
     	   
         geocoder.geocode( { 'latLng': myLatLng}, function(results, status) {        
             if (status == google.maps.GeocoderStatus.OK) 
-            {       	
+            {       	$log.warn('ooood');
             	$scope.latitude = latitude;
             	$scope.longitude = longitude;
             	$scope.address = results[1].formatted_address;
@@ -398,4 +398,4 @@ locatorControllers.controller('LookupController', function($scope)
      	  this.datetime = datetime;
      }	
 	
-});// controller end
+}]);// controller end

@@ -123,12 +123,10 @@ angular.module('SQLservices', []).factory('DB', ['$q','$rootScope',  function($q
 	};
 
 	self.onSuccess = function(tx, r) {
-		alert('sql ok');
 		console.log("SQLite query was successful!");
 	}
 
 	self.onError = function(tx, e) {
-		alert('sql');
 	    console.log("SQLite Error: " + e.message);
 	}
  

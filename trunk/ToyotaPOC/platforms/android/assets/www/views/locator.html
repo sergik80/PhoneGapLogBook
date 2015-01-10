@@ -1,36 +1,26 @@
         <!-- page -->
-        <div data-role="page" id="favouriteServices">  
+        <div id="favouriteServices">  
              
-		<div data-role="header">
-			<h4>Favorite Service Stations</h4>
-		</div>   
+		<h4>Favorite Service Stations</h4>
+	   
 	 
-        <div data-role="content" >    
-    	<button id="internetAccessButton" >{{networkStatus}}</button> 
+           
+    	<button id="internetAccessButton" class="btn btn-primary col-xs-10 btn-lg" >{{networkStatus}}</button> 
        
           <div id="mapCanvasLookup" style="position: relative; width: 100%; 
           height: 250px;"></div>
                
-           <ul data-role="listview" data-theme="g">
-                <li data-ng-repeat="servicePosition in serviceList" data-ng-click="getRoute(servicePosition.address)">
+           <ul class="list-group">
+                <li class="list-group-item" data-ng-repeat="servicePosition in serviceList" data-ng-click="getRoute(servicePosition.address)">
                     {{servicePosition.address}}
                  <span><input type="button" value="x" data-ng-click="removeServiceStation(servicePosition.address)" class="btn btn-default" /></span>
                 </li>
-           </ul>
-          
-          
-
-          
-          
-                   
-        </div>
- 
-         <a href="#/lookup" class="btn btn-primary btn-block">lookup service stations</a>
-       
+           </ul> 
         </div>
         <!-- page end -->
         
-               	
+          <a href="#/lookup" class="btn btn-primary col-xs-12 btn-lg">lookup service stations</a>
+         	
 
 
 

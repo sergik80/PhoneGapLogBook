@@ -1,35 +1,29 @@
         <!-- page -->
-        <div data-role="page" id="serviceLookup">
+        <div id="serviceLookup">
 
-		<div data-role="header">
 			<h4>Service Stations Lookup</h4>
-		</div>
-
-		<div data-role="content">
-                  
+    
+            <button class="btn btn-primary col-xs-12 btn-lg"  data-ng-click="getCurrentPosition()" >get current position</button> 
+		     <br/>
                 
-                <button class="btn btn-primary btn-block"  data-ng-click="getCurrentPosition()" >get current position</button> 
-		     
-                <button class="btn btn-primary btn-block" data-ng-click="saveCurrentPosition()">save to favourites</button>               
+                
+            <button class="btn btn-primary col-xs-12 btn-lg" data-ng-click="saveCurrentPosition()">save to favourites</button>               
 
-              <div id="addrDetails" style="list-style-type: none;position: absolute; bottom: 40; left: 50;right: 50; width:auto;background-color:lightgrey;padding:3px;">
+              <div id="addrDetails" style="list-style-type: none;position: relative; bottom: 40; left: 50;right: 50; width:auto;background-color:lightgrey;padding:3px;">
                <span id="address">{{address}}</span>
                <span id="latitude">{{latitude}}</span>
                <span id="longitude">{{longitude}}</span>
-               </div>     
+              </div>     
                
+      
+      <div id="lookupCanvas" 
+                     style="position: relative; margin-top: 20px; width: 100%; height:300px;"></div>
+      
+      
        <input type="text" id="radius" data-ng-model="radius" class="form-control" placeholder="radius to search km"/>
-	   <button data-ng-click="searchStations(radius)" class="btn btn-primary btn-block">Search Stations Within Radius</button>
+	   <button data-ng-click="searchStations(radius)" class="btn btn-primary col-xs-12 btn-lg">Search Stations Within Radius</button>
 	      
-		</div>
-		
-		
-		
-
-	
-	                <div id="lookupCanvas" 
-                     style="position: relative; margin-top: 20; width: 100%; height:400px;"></div>
-               
+	            
 	</div>
 	
 
