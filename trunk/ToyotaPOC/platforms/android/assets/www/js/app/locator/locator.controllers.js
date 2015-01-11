@@ -94,7 +94,8 @@ locatorControllers.controller('LocatorController', function($scope)
         var directionsService = new google.maps.DirectionsService();
         var directionsDisplay = new google.maps.DirectionsRenderer();
           
-      	var canvas = document.getElementById('mapCanvasLookup');	
+      	var canvas = document.getElementById('mapCanvasLookup');
+      	canvas.style.display = 'block';
       	// Set the initial Lat and Long of the Google Map
       	var myLatLng = new google.maps.LatLng(latitude, longitude);
       	var destLatLng = getServiceLatLng(serviceId);
@@ -174,7 +175,6 @@ locatorControllers.controller('LookupController', function($scope)
 {
 	var MAX_POSITIONS = 50;
 	$scope.getCurrentPosition = function() {
-	
 		navigator.geolocation.getCurrentPosition(success2, error2, { timeout: 60000, maximumAge:60000, enableHighAccuracy: true });
 	  }
 	
@@ -221,6 +221,7 @@ locatorControllers.controller('LookupController', function($scope)
     	var latitude = coords.latitude;
         var longitude = coords.longitude;
         var canvas = document.getElementById('lookupCanvas');	
+        canvas.style.display = 'block';
     	// Set the initial Lat and Long of the Google Map
     	var myLatLng = new google.maps.LatLng(latitude, longitude);   
         
@@ -305,6 +306,7 @@ locatorControllers.controller('LookupController', function($scope)
     			      printCurrentPosition(coords);// print current address and long lat
     			      
     			      var canvas = document.getElementById('lookupCanvas');	
+    			      canvas.style.display = 'block';
     			      // Set the initial Lat and Long of the Google Map
     			      var myLatLng = new google.maps.LatLng(myLat, myLon);   
     			        
