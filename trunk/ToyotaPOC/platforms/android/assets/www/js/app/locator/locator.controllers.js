@@ -170,10 +170,11 @@ locatorControllers.controller('LocatorController', function($scope)
 
 
 
-locatorControllers.controller('LookupController', ['$log',function($scope) 
+locatorControllers.controller('LookupController', function($scope) 
 {
 	var MAX_POSITIONS = 50;
 	$scope.getCurrentPosition = function() {
+	
 		navigator.geolocation.getCurrentPosition(success2, error2, { timeout: 60000, maximumAge:60000, enableHighAccuracy: true });
 	  }
 	
@@ -203,7 +204,7 @@ locatorControllers.controller('LookupController', ['$log',function($scope)
     	   
         geocoder.geocode( { 'latLng': myLatLng}, function(results, status) {        
             if (status == google.maps.GeocoderStatus.OK) 
-            {       	$log.warn('ooood');
+            {      
             	$scope.latitude = latitude;
             	$scope.longitude = longitude;
             	$scope.address = results[1].formatted_address;
@@ -261,7 +262,7 @@ locatorControllers.controller('LookupController', ['$log',function($scope)
     	 	  
     	 	     var _db = window.localStorage;
     	 	     _db.setItem('positions', JSON.stringify(positions));
-    	 	     alert('saved' +  JSON.stringify(positions)); 
+    	 	     alert('Added ' +  positions[0].address + ' to favourites'); 
     	 	  }
     	 	  else // this address is already in the favourites
     	 	  {
@@ -398,4 +399,4 @@ locatorControllers.controller('LookupController', ['$log',function($scope)
      	  this.datetime = datetime;
      }	
 	
-}]);// controller end
+});// controller end
